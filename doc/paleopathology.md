@@ -21,7 +21,7 @@
 <a name="instalacja-i-uruchomienie"></a>
 ## Instalacja i uruchomienie
 
-Program nie wymaga instalacji, folder z programem można skopiować na dysk lokalny i uruchomić plik paleopathology.exe. Można także uruchomić program np. bezpośrednio z urządzenia pen-drive, ale działanie programu będzie wówczas bardziej powolne.  Podczas pierwszego uruchomienia program sprawdza czy istnieje podfolder 'data' a w nim kolejne podfoldery 'image' (na zdjęcia oryginalne) i 's-image' (na miniatury zdjęć do szybkiego przeglądania) - jeżeli nie, zostaną automatycznie założone. Dodatkowo w przypadku pierwszego uruchomienia zostanie założona baza danych paleopathology.db (w formacie sqlite3).
+Program nie wymaga instalacji, folder z programem można skopiować na dysk lokalny i uruchomić plik PaleopathologyGallery.exe. Można także uruchomić program np. bezpośrednio z urządzenia pen-drive, ale działanie programu będzie wówczas bardziej powolne.  Podczas pierwszego uruchomienia program sprawdza czy istnieje podfolder 'data' a w nim kolejne podfoldery 'image' (na zdjęcia oryginalne) i 's-image' (na miniatury zdjęć do szybkiego przeglądania) - jeżeli nie, zostaną automatycznie założone. Dodatkowo w przypadku pierwszego uruchomienia zostanie założona baza danych paleopathology.db (w formacie sqlite3).
 
 Podczas uruchomienia, jeszcze przed wyświetleniem danych program oczekuje wprowadzenia symbolu (identyfikatora) badacza, który będzie wprowadzał dane. Ma to znaczenie podczas dołączania nowych rekordów, gdyż symbol badacza będzie elementem identyfikatora rekordu np.
 *IA/SYMBOL/000001*. Bez wprowadzonego symbolu dalsza praca z programem nie będzie możliwa.
