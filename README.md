@@ -1,2 +1,2 @@
 # PaleopathologyGallery
-simple desktop paleopathological database
+A simple desktop paleopathological database
