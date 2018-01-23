@@ -11,3 +11,7 @@ A simple desktop paleopathological database
 
 - REALbasic 2009
 - Einhugur plugins
+
+## Documentation
+
+[Help (pl)](https://github.com/pjaskulski/PaleopathologyGallery/blob/master/doc/paleopathology.md)
