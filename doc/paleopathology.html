@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>paleopathology</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Program Paleopathology</h1>
+<ul>
+<li><a href="paleopathology.html#instalacja-i-uruchomienie">Instalacja i uruchomienie</a></li>
+<li><a href="paleopathology.html#ogolny-wyglad-programu">Ogólny wygląd programu</a></li>
+<li><a href="paleopathology.html#dolaczanie-i-edycja-rekordu">Dołączanie i edycja rekordu</a></li>
+<li><a href="paleopathology.html#usuwanie-rekordow">Usuwanie rekordów</a></li>
+<li><a href="paleopathology.html#modyfikacje-bezposrednio-w-tabeli-danych">Modyfikacje bezpośrednio w tabeli danych</a></li>
+<li><a href="paleopathology.html#praca-z-tabela-danych">Praca z tabelą danych - sortowanie, kopiowanie rekordu (-ów)</a></li>
+<li><a href="paleopathology.html#okno-podgladu-zdjecia">Okno podglądu zdjęcia - kopiowanie podglądu, zapis, zoom</a></li>
+<li><a href="paleopathology.html#import-zdjec-z-folderu">Import zdjęć z folderu</a></li>
+<li><a href="paleopathology.html#przeciaganie_zdjec">Przeciąganie zdjęć do programu</a></li>
+<li><a href="paleopathology.html#synchronizacja-z-inna-baza-danych">Synchronizacja z inną bazą danych</a></li>
+<li><a href="paleopathology.html#wyszukiwanie">Wyszukiwanie</a></li>
+<li><a href="paleopathology.html#filtrowanie">Filtrowanie</a></li>
+<li><a href="paleopathology.html#zapis-zdjecia">Zapis zdjęcia</a></li>
+<li><a href="paleopathology.html#eksport-danych">Eksport danych</a></li>
+<li><a href="paleopathology.html#zoom">Zoom - podgląd powiększonego zdjęcia</a></li>
+<li><a href="paleopathology.html#kopia-zapasowa-danych">Kopia zapasowa danych</a></li>
+</ul>
+<p><a name="instalacja-i-uruchomienie"></a></p>
+<h2>Instalacja i uruchomienie</h2>
+<p>Program nie wymaga instalacji, folder z programem można skopiować na dysk lokalny i uruchomić plik paleopathology.exe. Można także uruchomić program np. bezpośrednio z urządzenia pen-drive, ale działanie programu będzie wówczas bardziej powolne.  Podczas pierwszego uruchomienia program sprawdza czy istnieje podfolder 'data' a w nim kolejne podfoldery 'image' (na zdjęcia oryginalne) i 's-image' (na miniatury zdjęć do szybkiego przeglądania) - jeżeli nie, zostaną automatycznie założone. Dodatkowo w przypadku pierwszego uruchomienia zostanie założona baza danych paleopathology.db (w formacie sqlite3).</p>
+<p>Podczas uruchomienia, jeszcze przed wyświetleniem danych program oczekuje wprowadzenia symbolu (identyfikatora) badacza, który będzie wprowadzał dane. Ma to znaczenie podczas dołączania nowych rekordów, gdyż symbol badacza będzie elementem identyfikatora rekordu np.
+<em>IA/SYMBOL/000001</em>. Bez wprowadzonego symbolu dalsza praca z programem nie będzie możliwa.</p>
+<p><img src="login.jpg" /></p>
+<p><a name="ogolny-wyglad-programu"></a></p>
+<h2>Ogólny wygląd programu</h2>
+<p>Po uruchomieniu wyświetlane jest główne okno programu, podzielone na trzy części. Górną część okna zajmuje tabela danych (lista rekordów), w dolnej lewej części prezentowane są szczegółowe dane bieżącego rekordu. W dolnej prawej części - podgląd zdjęcia przypisanego do bieżącego rekordu.   </p>
+<p><img src="winMain.jpg" /></p>
+<p>W pasku tytułu aplikacji widoczna jest liczba rekordów w bazie danych lub liczba rekordów zgodnych z aktualnie nałożonym filtrem.</p>
+<p><a name="dolaczanie-i-edycja-rekordu"></a></p>
+<h2>Dołączanie i edycja rekordu</h2>
+<p>Aby dołączyć nowy rekord do bazy należy skorzystać z menu <em>Records -&gt; New</em> lub użyć skrótu klawiszowego CRTL+N. Program wyświetli puste okno edycji rekordu:</p>
+<p><img src="winNew.jpg" /></p>
+<p>w którym należy uzupełnić dane rekordu. Niektóre pola np. <em>Site</em>, <em>Bone</em> są polami wspomaganymi słownikiem, to znaczy że zamiast wpisywania wartości można wybrać z rozwijanej listy gotową wartość - jedną z wpisanych w poprzednich rekordach. Pole 'słownikowane' obsługuje także funkcję autouzupełniania, tzn. że można wpisać pierwszą literę oczekiwanej wartości a program zawęzi zawartość słownika do pozycji zaczynających się na wpisaną literę.</p>
+<p><img src="winNew_slownik.jpg" /></p>
+<p>Pole <em>Notes</em> wyróżnia się możliwością wprowadzenia wielu wierszy tekstu. Długość wprowadzanego tekstu jest praktycznie nieograniczona (&gt; 1 mln znaków).</p>
+<p>Jeżeli w trakcie edycji rekordu użytkownik naciśnie przypadkiem klawisz ESC lub<br />
+przycisk <strong>Cancel</strong> program poinformuje, że wprowadzono dane do pól okna rekordu i zapyta czy na pewno dane te mają zostać utracone:</p>
+<p><img src="winNew_change.jpg" /></p>
+<p>Przycisk <strong>Image</strong> pozwala na wskazanie zdjęcia związanego z rekordem, program akceptuje pliki w formacie JPG. Wskazane zdjęcie jest wyświetlane w formie miniatury w polu podglądu. Podczas zapisywania nowego rekordu wskazany plik ze zdjęciem jest kopiowany do folderu 'image' w folderze danych programu ('data'), nazwa pliku jest zmieniana automatycznie na nazwę techniczną związaną z identyfikatorem rekordu. Dodatkowo, również automatycznie, tworzona jest miniatura zdjęcia, również w formacie JPG, o rozdzielczości nie większej niż 800x600. Plik miniatury jest używany podczas przeglądania danych w głównym oknie programu.</p>
+<p>Podczas zapisywania nowego rekordu program tworzy identyfikator (ID) rekordu. Identyfikator składa się z symbolu instytucji (IA - Instytut Archeologii), symbolu badacza, oraz kolejnego nr rekordu. Nr rekordu jest niepowtarzalny w obrębie jednej bazy, w przypadku usunięcia ostatniego rekordu - nr jest 'reużytkowany', w przypadku usuwania rekordów ze 'środka' bazy danych, system pozostawia puste miejsca w numeracji. </p>
+<p>Procedura edycji istniejącego rekordu przebiega podobnie do dołączania nowego, wywoływana jest funkcją <em>Records-&gt;Edit</em> (lub skrótem klawiszowym CRTL+E). W oknie edycji wyświetlone zostają uprzednio wprowadzone dane, w tym podgląd związanego z rekordem zdjęcia. Przyciskiem <strong>Image</strong> można zmienić zdjęcie na inne, pliki zapisane w folderach 'image' i 's-image' zostaną zastąpione przez wskazane nowe zdjęcie.     </p>
+<p><img src="winEdit.jpg" /></p>
+<p><a name="usuwanie-rekordow"></a></p>
+<h2>Usuwanie rekordów</h2>
+<p>Usuwanie rekordów umożliwia funkcja <em>Records -&gt; Delete</em> (lub skrót klawiszowy CRTL+D). Przed usunięciem rekordu aplikacja pyta o potwierdzenie. Usuwany jest zarówno rekord danych jak i plik ze zdjęciem (jeżeli był) oraz plik miniatury.</p>
+<p><img src="delete_ask.jpg" /></p>
+<p><a name="modyfikacje-bezposrednio-w-tabeli-danych"></a></p>
+<h2>Modyfikacje bezpośrednio w tabeli danych</h2>
+<p>Oprócz modyfikacji danych w oknie edycji rekordu możliwe jest także bezpośrednie wprowadzanie zmian w tabeli danych. Opcja ta dotyczy większości pól bazy z wyjątkiem pola <em>ID</em> i <em>Notes</em>. Aby przejść do trybu edycji pola w tabeli danych należy dwukrotnie kliknąć w daną komórkę tabeli.</p>
+<p><img src="edycja_tabeli.jpg" /></p>
+<p>Alternatywnie można tryb bezpośredniej edycji uruchomić skrótem klawiszowym CRTL+W, który powoduje przejście w tryb edycji bieżącego rekordu w kolumnie CATALOG NUMBER.
+W trybie edycji zmienia się wygląd komórki tabeli - tło staje się białe, program zaznacza całą zawartość pola (jeżeli jakaś jest). W edytowanej komórce działają standardowe skróty klawiszowe: CRTL+C - kopiuj, CRTL+V - wklej. Możliwe jest przejście w trybie edycji do sąsiednich pól - klawisz TAB przenosi nas do kolumny po prawej, kombinacja klawiszy SHIFT+TAB - w lewo, strzałki w górę i w dół przenoszą edycję w ramach tej samej kolumny, ale do poprzednich lub następnych rekordów. Podczas edycji komórki można zrezygnować ze zmian - klawiszem ESC (program przywraca wówczas pierwotną zawartość) lub zatwierdzić klawiszem ENTER, co spowoduje zapisanie zmian w bazie danych. Przechodzenie między komórkami w trybie edycji również powoduje automatycznie zapisanie zmian w opuszczanej komórce.</p>
+<p>Takie działanie tabeli danych pozwala na szybie uzupełnianie kolumn danych tą samą wartością - po zapamiętaniu zawartości pola poprzez CRTL+C, można 'klonować' tą wartość w kolejnych rekordach poprzez kombinację klawiszy: strzałka w dół i CRTL+V.</p>
+<p><a name="praca-z-tabela-danych"></a></p>
+<h2>Praca z tabelą danych - sortowanie, kopiowanie rekordu (-ów)</h2>
+<p>Podczas przeglądania danych w tabeli danych (górna część głównego okna programu) można zmieniać kolejność rekordów - kliknięcie w nagłówek pola tabeli powoduje przesortowanie danych według tego pola, powtórne kliknięcie - przesortowanie odwrotne (czyli rosnąco lub malejąco). Program oznacza kolorem nagłówek kolumny wg której posortowano dane, a z prawej strony nagłówka szarą strzałką kierunek sortowania (malejąco - rosnąco).  </p>
+<p><img src="tabela_sortowanie.jpg" /></p>
+<p>Tabela danych posiada dodatkowe funkcje dostępne poprzez podręczne menu (prawy przycisk myszy):</p>
+<p><img src="tabela_menu.jpg" /></p>
+<ul>
+<li><em>Copy record data</em> - kopiuje dane bieżącego rekordu, w formie umożliwiającej wklejenie do np. edytora tekstu.</li>
+<li><em>Copy all records</em> - kopiuje całą zwartość tabeli danych, w formie wierszy i pól rozdzielanych tabulatorem, ułatwiającej wklejenie do np. arkusza kalkulacyjnego.</li>
+<li><em>Zoom</em> - wywołuje okno z powiększonym zdjęciem przypisanym do bieżącego rekordu.</li>
+</ul>
+<p><a name="okno-podgladu-zdjecia"></a></p>
+<h2>Okno podglądu zdjęcia - kopiowanie podglądu, zapis, zoom</h2>
+<p>Wyświetlane w dolnej prawej części głównego okna programu pole z podglądem zdjęcia umożliwia wywołanie kilku dodatkowych funkcji, dostępnych poprzez podręczne menu wywoływane prawym klawiszem myszy:</p>
+<p><img src="preview_menu.jpg" />   </p>
+<ul>
+<li><em>Zoom</em> - wywołuje okno z powiększonym zdjęciem przypisanym do bieżącego rekordu.</li>
+<li><em>Save As...</em> - umożliwia zapisanie zdjęcia (oryginalnego zdjęcia, nie miniatury z podglądem zdjęcia) we wskazanym przez użytkownika miejscu.</li>
+<li><em>Copy</em> - kopiuje zdjęcie do schowka.</li>
+<li><em>Copy image preview</em> - kopiuje miniaturę zdjęcia do schowka.</li>
+</ul>
+<p><a name="import-zdjec-z-folderu"></a></p>
+<h2>Import zdjęć z folderu</h2>
+<p>W przypadku wprowadzania dużej liczby zdjęć do bazy danych można skorzystać z funkcji <em>Records-&gt;Import</em>, która pozwala na importowanie zdjęć ze wskazanego folderu. Po wywołaniu funkcji program wyświetla okno importu:</p>
+<p><img src="winImport.jpg" />   </p>
+<p>W oknie importu, w polu <em>Path</em> można wskazać ścieżkę do folderu ze zdjęciami w formacie JPG. Po wskazaniu folderu program sprawdza jego zawartość i wszystkie znalezione pliki jpg są wyświetlane w tabelce po lewej stronie okna, po prawej wyświetlany jest podgląd dla bieżącego pliku. Możliwe jest zaznaczenie grupy plików - zaznaczanie/odznaczanie odbywa się poprzez kliknięcie myszą na polu check-box w pierwszej kolumnie, lub poprzez klawisz SPACJI. Podręczne menu tabelki plików umożliwia zaznaczenie od razu wszystkich plików (<em>Select all<em>), odznaczenie wszystkich plików (</em>Deselect all</em>) lub odwrócenie zaznaczenia (<em>Invert selection</em>).</p>
+<p><img src="winImport2.jpg" />   </p>
+<p>Widoczne w górnym prawym rogu pole <em>Images</em> wyświetla liczbę plików zaznaczonych oraz liczbę wszystkich dostępnych plików w  wybranym folderze. Pole <em>Site</em> umieszczone ponad tabelką z listą plików umożliwia wpisanie domyślnej zawartości pole Site w dodawanych rekordach.</p>
+<p>Po wyborze plików przycisk Import rozpoczyna procedurę importu zdjęć i dodawania rekordów do bazy danych.</p>
+<p><img src="import_proces.jpg" /></p>
+<p>Podczas importu zdjęć program wyświetla pasek postępu, po zakończeniu importu okno jest zamykane i wyświetlona zostaje główna tabela danych a w niej ostatnio dodanych rekord.</p>
+<p><a name="przeciaganie_zdjec"></a></p>
+<h2>Przeciąganie zdjęć do programu</h2>
+<p>Program obsługuje możliwość przeciągania plików zdjęć np. z eksploratora Windows do tabeli danych w głównym oknie programu. W przypadku pojedynczego zdjęcia, program wyświetli okno identyczne jak przy dodawaniu nowego rekordu, z wczytanym już podglądem zdjęcia - wystarczy uzupełnić dane rekordu i zapisać (plik zdjęcia zostanie skopiowany do folderu danych, zostanie także utworzona miniatura).</p>
+<p><img src="drag_drop1.jpg" /></p>
+<p>W przypadku przeciągnięcia większej liczby zdjęć program wyświetli okno zbliżone do okna importu z folderu, w którym można uzupełnić pole <em>Site</em> i przyciskiem <strong>Import</strong> rozpocząć import zdjęć do bazy danych.</p>
+<p><img src="drag_drop2.jpg" /></p>
+<p><a name="synchronizacja-z-inna-baza-danych"></a></p>
+<h2>Synchronizacja z inną bazą danych</h2>
+<p>Funkcja synchronizacji wywoływana z menu <em>Records-&gt;Synchronization</em> umożliwia pobranie rekordów i zdjęć z bazy innego użytkownika.</p>
+<p><img src="winSynchronization.jpg" /></p>
+<p>Po uruchomieniu wyświetlane jest okno synchronizacji, w którym należy wskazać ścieżkę do folderu danych z którego będą importowane dane. W folderze tym powinna znajdować się baza danych (plik paleopathology.db), oraz podfoldery 'image' i 's-image'. Po wskazaniu folderu program wyświetli listę rekordów które można zaimportować do naszej bazy danych, wyświetlane są pola ID, CAT. NO i SITE, oraz podgląd bieżącego zdjęcia związanego z rekordem. Podobnie jak w przypadku importu folderu zdjęć w podręcznym menu dostępne są funkcje zaznaczania i odznaczania wszystkich rekordów.    </p>
+<p><a name="wyszukiwanie"></a></p>
+<h2>Wyszukiwanie</h2>
+<p>Aplikacja umożliwia proste wyszukiwanie w tabeli danych. Po wywołaniu funkcji z menu <em>Records-&gt;Find</em> (lub skrótu klawiszowego CRTL+I) wyświetlane jest okno wyszukiwania:</p>
+<p><img src="winFind.jpg" /></p>
+<p>W oknie znajduje się tylko jedno pole w które należy wprowadzić poszukiwany tekst. Wyszukiwanie następuje we wszystkich polach bazy danych. Jeżeli tekst zostanie znaleziony program ustawia się na znalezionym rekordzie w tabeli danych. Można wyszukać kolejne wystąpienia poprzez menu <em>Records-&gt;Find next</em> (lub skrótem klawiszowym F3).      </p>
+<p><a name="filtrowanie"></a></p>
+<h2>Filtrowanie</h2>
+<p>Oprócz wyszukiwania dostępna jest także możliwość filtrowania danych, wywoływana poprzez menu <em>Records-&gt;Filter</em> (lub skrót klawiszowy CRTL+F). Program wyświetla wówczas okno z możliwością wprowadzenia warunków filtrowania:</p>
+<p><img src="winFilter.jpg" /></p>
+<p>W oknie widoczne są wszystkie pola bazy danych (poza ID), możliwe jest wprowadzenie fragmentu tekstu który ma być odnaleziony w danym polu, lub wymuszenie by wprowadzony tekst miał być dokładnie zgodny z zawartością pola (należy wówczas zaznaczyć check-box widoczny z prawej strony pola). Cześć z pól, np. <em>Site</em>, <em>Bone</em> czy <em>Change type</em> posiada (podobnie jak przy edycji rekordu) możliwość wyboru wartości ze słownika (pola rozwijanego), w którym znajdują się wszystkie (niepowtarzające się) wartości występujące w danym polu w całej bazie danych.</p>
+<p>Po wprowadzeniu oczekiwanych wartości można przyciskiem OK uruchomić proces filtrowania, w wyniku którego tabela danych zostanie ograniczona do rekordów spełniających warunki filtra. W pasku tytułu programu zostanie wyświetlona informacja o liczbie znalezionych rekordów.</p>
+<p><img src="filtr_wynik.jpg" /></p>
+<p>Przywrócenie wyświetlania wszystkich rekordów z bazy danych jest możliwe dzięki funkcji <em>Records-&gt;Show all records</em> (lub skrót CRTL+G).</p>
+<p><a name="zapis-zdjecia"></a></p>
+<h2>Zapis zdjęcia</h2>
+<p>Funkcja <em>Records-&gt;Copy file to</em> (lub CRTL+P)pozwala na zapis zdjęcia przypisanego do bieżącego rekordu w miejsce wskazane przez użytkownika.</p>
+<p><a name="eksport-danych"></a></p>
+<h2>Eksport danych</h2>
+<p>Funkcja <em>Records-&gt;Export...</em> umożliwia zapisanie bazy danych w formie pliku tekstowego csv (separatorem pól jest średnik). Plik taki można łatwo wczytać do arkusza kalkulacyjnego.</p>
+<p><a name="zoom"></a></p>
+<h2>Zoom - podgląd powiększonego zdjęcia</h2>
+<p>Funkcja <em>Records-&gt;Zoom</em> (skrót CRTL+M lub ENTER) wywołuje okno z powiększonym zdjęciem przypisanym do bieżącego rekordu.</p>
+<p><img src="winZoom.jpg" /></p>
+<p>Okno Zoom posiada dodatkowe funkcje widoczne w podręcznym menu (prawy przycisk myszy).</p>
+<ul>
+<li><em>Full Size</em> - wyświetla zdjęcie w pełnej rozdzielczości, rozmiary zdjęcia mogą przekraczać rozmar okna Zoom, wówczas możliwa jest nawigacja poprzez paski skrolowania (u dołu i po prawej stronie okna), lub poprzez klawisze 'strzałek' oraz PageUp i PageDown a także za pomocą myszy.</li>
+<li><em>10%</em> do <em>90%</em> - skaluje zdjęcie do wybranej wielkości procentowej</li>
+<li><em>Fit image to screen</em> - przywraca domyślny rozmiar zdjęcia dopasowany do wielkości okna Zoom. </li>
+<li><em>Save As...</em> - umożliwia zapisanie zdjęcia we wskazanym przez użytkownika miejscu.</li>
+<li><em>Copy</em> - kopiuje zdjęcie do schowka.</li>
+<li><em>Rotate right</em> - obraca zdjęcie o 90 stopni w prawo (w oknie Zoom, zmiana nie jest zapisywana w pliku).</li>
+<li><em>Rotate left</em> - obraca zdjęcie o 90 stopni w lewo (j.w.).</li>
+<li><em>Notes</em> - wyświetla okienko z możliwością edycji pola Notes.</li>
+<li><em>Close</em> - zamyka okno Zoom, alternatywnie można użyć przycisku w górnym prawym rogu okna lub klawisza ESC.  </li>
+</ul>
+<p><img src="zoom_notes.jpg" /></p>
+<p><a name="kopia-zapasowa-danych"></a></p>
+<h2>Kopia zapasowa danych</h2>
+<p>Podczas uruchomienia programu tworzona jest automatycznie kopia bazy danych
+w pliku paleopathology.backup. Jeżeli istniała poprzednia kopia - jest ona nadpisywana. W razie uszkodzenia danych podczas bieżącej sesji z programem (np. w przypadku błędnego usunięcia danych przez użytkownika) można po wyjściu z aplikacji nadpisać bazę paleopathology.db plikiem paleopathology.backup i ponownie uruchomić program. <strong>Uwaga</strong>: kopia zapasowa dotyczy danych - nie zdjęć.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
