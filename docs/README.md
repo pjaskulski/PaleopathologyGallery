@@ -7,6 +7,12 @@
 - REALbasic 2009
 - Einhugur plugins
 
+## Releases
+
+### 1.0 alpha
+
+[PaleopathologyGallery1.0.zip](https://github.com/pjaskulski/PaleopathologyGallery/releases/download/ver1.0/PaleopathologyGallery1.0.zip)
+
 ## Documentation (for now, only in Polish)
 
 * [Instalacja i uruchomienie](paleopathology.html#instalacja-i-uruchomienie)
