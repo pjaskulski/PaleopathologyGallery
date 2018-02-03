@@ -1,7 +1,7 @@
 # PaleopathologyGallery
 A simple desktop paleopathological database
 
-![The main screen of the program.](doc/winMain.jpg)
+![The main screen of the program.](docs/winMain.jpg)
 
 ## Dependencies
 
@@ -14,7 +14,7 @@ A simple desktop paleopathological database
 
 ## Documentation
 
-[Help (pl)](https://github.com/pjaskulski/PaleopathologyGallery/blob/master/doc/paleopathology.md)
+[Help (pl)](https://github.com/pjaskulski/PaleopathologyGallery/blob/master/docs/paleopathology.md)
 
 ## Releases
 
