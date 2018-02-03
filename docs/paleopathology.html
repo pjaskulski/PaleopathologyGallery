@@ -291,143 +291,122 @@ img {
 </style>
 </head>
 <body>
-<h1>Program Paleopathology</h1>
+<h1>PaleopathologyGallery</h1>
 <ul>
-<li><a href="paleopathology.html#instalacja-i-uruchomienie">Instalacja i uruchomienie</a></li>
-<li><a href="paleopathology.html#ogolny-wyglad-programu">Ogólny wygląd programu</a></li>
-<li><a href="paleopathology.html#dolaczanie-i-edycja-rekordu">Dołączanie i edycja rekordu</a></li>
-<li><a href="paleopathology.html#usuwanie-rekordow">Usuwanie rekordów</a></li>
-<li><a href="paleopathology.html#modyfikacje-bezposrednio-w-tabeli-danych">Modyfikacje bezpośrednio w tabeli danych</a></li>
-<li><a href="paleopathology.html#praca-z-tabela-danych">Praca z tabelą danych - sortowanie, kopiowanie rekordu (-ów)</a></li>
-<li><a href="paleopathology.html#okno-podgladu-zdjecia">Okno podglądu zdjęcia - kopiowanie podglądu, zapis, zoom</a></li>
-<li><a href="paleopathology.html#import-zdjec-z-folderu">Import zdjęć z folderu</a></li>
-<li><a href="paleopathology.html#przeciaganie_zdjec">Przeciąganie zdjęć do programu</a></li>
-<li><a href="paleopathology.html#synchronizacja-z-inna-baza-danych">Synchronizacja z inną bazą danych</a></li>
-<li><a href="paleopathology.html#wyszukiwanie">Wyszukiwanie</a></li>
-<li><a href="paleopathology.html#filtrowanie">Filtrowanie</a></li>
-<li><a href="paleopathology.html#zapis-zdjecia">Zapis zdjęcia</a></li>
-<li><a href="paleopathology.html#eksport-danych">Eksport danych</a></li>
-<li><a href="paleopathology.html#zoom">Zoom - podgląd powiększonego zdjęcia</a></li>
-<li><a href="paleopathology.html#kopia-zapasowa-danych">Kopia zapasowa danych</a></li>
+<li><a href="#installation-and-launch">Installation and launch</a></li>
+<li><a href="#the-overall-appearance-of-the-program">The overall appearance of the program</a></li>
+<li><a href="#attach-and-edit-a-record">Attach and edit a record</a></li>
+<li><a href="#deleting-records">Deleting records</a></li>
+<li><a href="#modifications-directly-in-the-data-table">Modifications directly in the data table</a></li>
+<li><a href="#working-with-data-table">Working with data table</a></li>
+<li><a href="#image-preview-window">Image preview window</a></li>
+<li><a href="#import-photos-from-a-folder">Import photos from a folder</a></li>
+<li><a href="#drag-photos-to-the-program">Drag photos to the program</a></li>
+<li><a href="#synchronization-with-another-database">Synchronization with another database</a></li>
+<li><a href="#search">Search</a></li>
+<li><a href="#filtering-the-records">Filtering the records</a></li>
+<li><a href="#record-photo">Record photo</a></li>
+<li><a href="#data-export">Data export</a></li>
+<li><a href="#preview-of-the-enlarged-photo">Preview of the enlarged photo</a></li>
+<li><a href="#data-backup">Data backup</a></li>
 </ul>
-<p><a name="instalacja-i-uruchomienie"></a></p>
-<h2>Instalacja i uruchomienie</h2>
-<p>Program nie wymaga instalacji, folder z programem można skopiować na dysk lokalny i uruchomić plik paleopathology.exe. Można także uruchomić program np. bezpośrednio z urządzenia pen-drive, ale działanie programu będzie wówczas bardziej powolne.  Podczas pierwszego uruchomienia program sprawdza czy istnieje podfolder 'data' a w nim kolejne podfoldery 'image' (na zdjęcia oryginalne) i 's-image' (na miniatury zdjęć do szybkiego przeglądania) - jeżeli nie, zostaną automatycznie założone. Dodatkowo w przypadku pierwszego uruchomienia zostanie założona baza danych paleopathology.db (w formacie sqlite3).</p>
-<p>Podczas uruchomienia, jeszcze przed wyświetleniem danych program oczekuje wprowadzenia symbolu (identyfikatora) badacza, który będzie wprowadzał dane. Ma to znaczenie podczas dołączania nowych rekordów, gdyż symbol badacza będzie elementem identyfikatora rekordu np.
-<em>IA/SYMBOL/000001</em>. Bez wprowadzonego symbolu dalsza praca z programem nie będzie możliwa.</p>
+<h2>Installation and launch</h2>
+<p>The program does not require installation. After copying the folder with the program to a local disk run the PaleopathologyGallery.exe file. You can also run the program directly from the pen-drive, but it will slow the program significantly. During the first launch, the program checks, if there is a subfolder 'data' and it’s subfolders: 'image' (for original photos) and 's-image' (for thumbnail images for quick browsing) - if not, they will be automatically created. In addition, during the first launch, the paleopathology.db database will be created (in sqlite3 format).</p>
+<p>During each launch, before the data is displayed, the program requires entering the researcher's symbol (identifier) uniquely describing the person who will enter the data. This is important when attaching new records because the researcher's symbol will be part of the record identifier, eg IA / SYMBOL / 000001. Without the logging with researcher ID, further work with the program will not be possible.</p>
 <p><img src="login.jpg" /></p>
-<p><a name="ogolny-wyglad-programu"></a></p>
-<h2>Ogólny wygląd programu</h2>
-<p>Po uruchomieniu wyświetlane jest główne okno programu, podzielone na trzy części. Górną część okna zajmuje tabela danych (lista rekordów), w dolnej lewej części prezentowane są szczegółowe dane bieżącego rekordu. W dolnej prawej części - podgląd zdjęcia przypisanego do bieżącego rekordu.   </p>
+<h2>The overall appearance of the program</h2>
+<p>After starting, the main program window is displayed, divided into three parts. The upper part of the window is occupied by the data table (list of records), in the lower left part, the detailed data of the current record is presented. In the lower right part - preview of the photo assigned to the current record.</p>
 <p><img src="winMain.jpg" /></p>
-<p>W pasku tytułu aplikacji widoczna jest liczba rekordów w bazie danych lub liczba rekordów zgodnych z aktualnie nałożonym filtrem.</p>
-<p><a name="dolaczanie-i-edycja-rekordu"></a></p>
-<h2>Dołączanie i edycja rekordu</h2>
-<p>Aby dołączyć nowy rekord do bazy należy skorzystać z menu <em>Records -&gt; New</em> lub użyć skrótu klawiszowego CRTL+N. Program wyświetli puste okno edycji rekordu:</p>
+<p>The application title bar shows the number of records in the database or the number of records matching the currently imposed filter.</p>
+<h2>Attach and edit a record</h2>
+<p>To attach a new record to the database, use the menu <em>Records -&gt; New</em> or use the keyboard shortcut CTRL + N. The program will display an empty record editing window:</p>
 <p><img src="winNew.jpg" /></p>
-<p>w którym należy uzupełnić dane rekordu. Niektóre pola np. <em>Site</em>, <em>Bone</em> są polami wspomaganymi słownikiem, to znaczy że zamiast wpisywania wartości można wybrać z rozwijanej listy gotową wartość - jedną z wpisanych w poprzednich rekordach. Pole 'słownikowane' obsługuje także funkcję autouzupełniania, tzn. że można wpisać pierwszą literę oczekiwanej wartości a program zawęzi zawartość słownika do pozycji zaczynających się na wpisaną literę.</p>
+<p>which allows for entering the data for the record. Some fields, eg <em>Site</em>, <em>Bone</em> are supported by a dictionary, which means that instead of entering values, you can choose existing one from the drop-down list. The list comprises of all of the previous entries. The 'dictionary' field also supports the autocomplete function, i.e. you can enter the first letter of the expected value and the program will narrow the dictionary's content to entries beginning with the letter you enter.</p>
+<p>The <em>Notes</em> field allows entering many lines of text. The length of the entered text is virtually unlimited (&gt; 1 million characters).</p>
 <p><img src="winNew_slownik.jpg" /></p>
-<p>Pole <em>Notes</em> wyróżnia się możliwością wprowadzenia wielu wierszy tekstu. Długość wprowadzanego tekstu jest praktycznie nieograniczona (&gt; 1 mln znaków).</p>
-<p>Jeżeli w trakcie edycji rekordu użytkownik naciśnie przypadkiem klawisz ESC lub<br />
-przycisk <strong>Cancel</strong> program poinformuje, że wprowadzono dane do pól okna rekordu i zapyta czy na pewno dane te mają zostać utracone:</p>
+<p>If during the editing of the record the user accidentally presses the ESC or the <strong>Cancel</strong> button program will display warning that data has been entered into the fields of the record window and will ask for confirmation that user want the data to be lost:</p>
 <p><img src="winNew_change.jpg" /></p>
-<p>Przycisk <strong>Image</strong> pozwala na wskazanie zdjęcia związanego z rekordem, program akceptuje pliki w formacie JPG. Wskazane zdjęcie jest wyświetlane w formie miniatury w polu podglądu. Podczas zapisywania nowego rekordu wskazany plik ze zdjęciem jest kopiowany do folderu 'image' w folderze danych programu ('data'), nazwa pliku jest zmieniana automatycznie na nazwę techniczną związaną z identyfikatorem rekordu. Dodatkowo, również automatycznie, tworzona jest miniatura zdjęcia, również w formacie JPG, o rozdzielczości nie większej niż 800x600. Plik miniatury jest używany podczas przeglądania danych w głównym oknie programu.</p>
-<p>Podczas zapisywania nowego rekordu program tworzy identyfikator (ID) rekordu. Identyfikator składa się z symbolu instytucji (IA - Instytut Archeologii), symbolu badacza, oraz kolejnego nr rekordu. Nr rekordu jest niepowtarzalny w obrębie jednej bazy, w przypadku usunięcia ostatniego rekordu - nr jest 'reużytkowany', w przypadku usuwania rekordów ze 'środka' bazy danych, system pozostawia puste miejsca w numeracji. </p>
-<p>Procedura edycji istniejącego rekordu przebiega podobnie do dołączania nowego, wywoływana jest funkcją <em>Records-&gt;Edit</em> (lub skrótem klawiszowym CRTL+E). W oknie edycji wyświetlone zostają uprzednio wprowadzone dane, w tym podgląd związanego z rekordem zdjęcia. Przyciskiem <strong>Image</strong> można zmienić zdjęcie na inne, pliki zapisane w folderach 'image' i 's-image' zostaną zastąpione przez wskazane nowe zdjęcie.     </p>
+<p>The <strong>Image</strong> button allows indicating the image related to the record; the program accepts files in JPG format. The photo is displayed in the form of a thumbnail in the preview field. When saving a new record, the photo file is copied to the 'image' folder in the program data folder ('data'), the file name is automatically changed to the technical name associated with the record identifier. Additionally, also automatically, a thumbnail image is created, also in JPG format. Its resolution will not exceed 800x600. The thumbnail file is used when viewing data in the main program window.</p>
+<p>When saving a new record, the program creates the ID (ID) of the record. The identifier consists of the institution's symbol (now: IA - Institute of Archaeology), the symbol of the researcher, and the next record number. The record number is unique within one database, in the case of deleting the last record - the number is 'reused', in the case of deleting records from the 'middle' of the database, the system leaves empty spaces in the numbering.</p>
+<p>The procedure for editing an existing record is similar to adding a new record, it is called by the <em>Records-&gt; Edit</em> function (or the keyboard shortcut CTRL + E). The editing window displays the previously entered data, including the preview associated with the photo record. Using the Image button you can change the image file, the files saved in the 'image' and 's-image' folders will be replaced with the indicated new photo.</p>
 <p><img src="winEdit.jpg" /></p>
-<p><a name="usuwanie-rekordow"></a></p>
-<h2>Usuwanie rekordów</h2>
-<p>Usuwanie rekordów umożliwia funkcja <em>Records -&gt; Delete</em> (lub skrót klawiszowy CRTL+D). Przed usunięciem rekordu aplikacja pyta o potwierdzenie. Usuwany jest zarówno rekord danych jak i plik ze zdjęciem (jeżeli był) oraz plik miniatury.</p>
+<h2>Deleting records</h2>
+<p>Deleting records is possible with the Records -&gt; Delete function (or the keyboard shortcut CTRL + D). Before deleting the record, the application asks for confirmation. Both the data record and the photo file (if any is attached to the record) and the thumbnail file are deleted.</p>
 <p><img src="delete_ask.jpg" /></p>
-<p><a name="modyfikacje-bezposrednio-w-tabeli-danych"></a></p>
-<h2>Modyfikacje bezpośrednio w tabeli danych</h2>
-<p>Oprócz modyfikacji danych w oknie edycji rekordu możliwe jest także bezpośrednie wprowadzanie zmian w tabeli danych. Opcja ta dotyczy większości pól bazy z wyjątkiem pola <em>ID</em> i <em>Notes</em>. Aby przejść do trybu edycji pola w tabeli danych należy dwukrotnie kliknąć w daną komórkę tabeli.</p>
+<h2>Modifications directly in the data table</h2>
+<p>In addition to data modification in the record editing window, it is also possible to directly make changes to the data table. This option applies to most database fields except the <em>ID</em> and <em>Notes</em> fields. To enter the field edition mode in the data table, double-click on the given table cell.</p>
 <p><img src="edycja_tabeli.jpg" /></p>
-<p>Alternatywnie można tryb bezpośredniej edycji uruchomić skrótem klawiszowym CRTL+W, który powoduje przejście w tryb edycji bieżącego rekordu w kolumnie CATALOG NUMBER.
-W trybie edycji zmienia się wygląd komórki tabeli - tło staje się białe, program zaznacza całą zawartość pola (jeżeli jakaś jest). W edytowanej komórce działają standardowe skróty klawiszowe: CRTL+C - kopiuj, CRTL+V - wklej. Możliwe jest przejście w trybie edycji do sąsiednich pól - klawisz TAB przenosi nas do kolumny po prawej, kombinacja klawiszy SHIFT+TAB - w lewo, strzałki w górę i w dół przenoszą edycję w ramach tej samej kolumny, ale do poprzednich lub następnych rekordów. Podczas edycji komórki można zrezygnować ze zmian - klawiszem ESC (program przywraca wówczas pierwotną zawartość) lub zatwierdzić klawiszem ENTER, co spowoduje zapisanie zmian w bazie danych. Przechodzenie między komórkami w trybie edycji również powoduje automatycznie zapisanie zmian w opuszczanej komórce.</p>
-<p>Takie działanie tabeli danych pozwala na szybie uzupełnianie kolumn danych tą samą wartością - po zapamiętaniu zawartości pola poprzez CRTL+C, można 'klonować' tą wartość w kolejnych rekordach poprzez kombinację klawiszy: strzałka w dół i CRTL+V.</p>
-<p><a name="praca-z-tabela-danych"></a></p>
-<h2>Praca z tabelą danych - sortowanie, kopiowanie rekordu (-ów)</h2>
-<p>Podczas przeglądania danych w tabeli danych (górna część głównego okna programu) można zmieniać kolejność rekordów - kliknięcie w nagłówek pola tabeli powoduje przesortowanie danych według tego pola, powtórne kliknięcie - przesortowanie odwrotne (czyli rosnąco lub malejąco). Program oznacza kolorem nagłówek kolumny wg której posortowano dane, a z prawej strony nagłówka szarą strzałką kierunek sortowania (malejąco - rosnąco).  </p>
+<p>Alternatively, the direct editing mode can be run with the keyboard shortcut CTRL + W, which causes the editing mode of the current record in the CATALOG NUMBER column. In the edit mode, the appearance of the table cell changes - the background becomes white, the program selects the entire contents of the field (if any). Standard hotkeys work in the cell being edited: CTRL + C - copy, CTRL + V - paste. It is possible to move to the adjacent fields in the edit mode - the TAB key takes you to the right column, the SHIFT + TAB key combination - to the left, the up and down arrows move the edition within the same column, but to the previous or next records. While editing a cell, you can choose not to enter any of the changes - use the ESC key (the program then restores the original content) or confirm with the ENTER key, which will save the changes in the database. Moving between cells in the edit mode also automatically saves changes in the edited cell.</p>
+<h2>Working with data table</h2>
+<p>When viewing records in the data table (upper part of the main program window), the order of records can be changed - clicking on the table field header sorts the data according to this field, re-clicking - reverse sorting (i.e. ascending or descending). The program colours the header of the column in which the data has been sorted, and the sorting direction (descending - ascending) is indicated on the right side of the header with a relevant grey arrow.</p>
 <p><img src="tabela_sortowanie.jpg" /></p>
-<p>Tabela danych posiada dodatkowe funkcje dostępne poprzez podręczne menu (prawy przycisk myszy):</p>
+<p>The data table has additional functions available through the pop-up menu (right mouse button):</p>
 <p><img src="tabela_menu.jpg" /></p>
 <ul>
-<li><em>Copy record data</em> - kopiuje dane bieżącego rekordu, w formie umożliwiającej wklejenie do np. edytora tekstu.</li>
-<li><em>Copy all records</em> - kopiuje całą zwartość tabeli danych, w formie wierszy i pól rozdzielanych tabulatorem, ułatwiającej wklejenie do np. arkusza kalkulacyjnego.</li>
-<li><em>Zoom</em> - wywołuje okno z powiększonym zdjęciem przypisanym do bieżącego rekordu.</li>
+<li><em>Copy record data</em> - copies data of the current record, in a form that allows you to paste into e.g. a text editor.</li>
+<li><em>Copy all records</em> - copies the whole content of the data table, in the form of rows and tab-delimited fields, which facilitates pasting into eg a spreadsheet.</li>
+<li><em>Zoom</em> - opens a window with an enlarged photo assigned to the current record. </li>
 </ul>
-<p><a name="okno-podgladu-zdjecia"></a></p>
-<h2>Okno podglądu zdjęcia - kopiowanie podglądu, zapis, zoom</h2>
-<p>Wyświetlane w dolnej prawej części głównego okna programu pole z podglądem zdjęcia umożliwia wywołanie kilku dodatkowych funkcji, dostępnych poprzez podręczne menu wywoływane prawym klawiszem myszy:</p>
+<h2>Image preview window</h2>
+<p>The field with image preview displayed in the bottom right part of the main program window allows you to select several additional functions accessible via the right-click popup menu:</p>
 <p><img src="preview_menu.jpg" />   </p>
 <ul>
-<li><em>Zoom</em> - wywołuje okno z powiększonym zdjęciem przypisanym do bieżącego rekordu.</li>
-<li><em>Save As...</em> - umożliwia zapisanie zdjęcia (oryginalnego zdjęcia, nie miniatury z podglądem zdjęcia) we wskazanym przez użytkownika miejscu.</li>
-<li><em>Copy</em> - kopiuje zdjęcie do schowka.</li>
-<li><em>Copy image preview</em> - kopiuje miniaturę zdjęcia do schowka.</li>
+<li><em>Zoom</em> - opens a window with an enlarged photo assigned to the current record.</li>
+<li><em>Save As...</em> - allows you to save a photo (the original photo, not a thumbnail with a photo preview) in the place indicated by the user.</li>
+<li><em>Copy</em> - copies the photo to the clipboard.</li>
+<li><em>Copy image preview</em> - copies the thumbnail image to the clipboard.</li>
 </ul>
-<p><a name="import-zdjec-z-folderu"></a></p>
-<h2>Import zdjęć z folderu</h2>
-<p>W przypadku wprowadzania dużej liczby zdjęć do bazy danych można skorzystać z funkcji <em>Records-&gt;Import</em>, która pozwala na importowanie zdjęć ze wskazanego folderu. Po wywołaniu funkcji program wyświetla okno importu:</p>
+<h2>Import photos from a folder</h2>
+<p>If there is a need to enter a large number of photos into the database, the <em>Records-&gt; Import</em> function can be used, which allows to import photos from the selected folder. After selecting this option, the program displays the import window:</p>
 <p><img src="winImport.jpg" />   </p>
-<p>W oknie importu, w polu <em>Path</em> można wskazać ścieżkę do folderu ze zdjęciami w formacie JPG. Po wskazaniu folderu program sprawdza jego zawartość i wszystkie znalezione pliki jpg są wyświetlane w tabelce po lewej stronie okna, po prawej wyświetlany jest podgląd dla bieżącego pliku. Możliwe jest zaznaczenie grupy plików - zaznaczanie/odznaczanie odbywa się poprzez kliknięcie myszą na polu check-box w pierwszej kolumnie, lub poprzez klawisz SPACJI. Podręczne menu tabelki plików umożliwia zaznaczenie od razu wszystkich plików (<em>Select all<em>), odznaczenie wszystkich plików (</em>Deselect all</em>) lub odwrócenie zaznaczenia (<em>Invert selection</em>).</p>
+<p>In the import window, in the Path field, you can specify the path to the folder with photos in JPG format. After indicating the folder, the program checks its contents and all found jpg files are displayed in the table on the left side of the window, on the right the preview of the current file is displayed. It is possible to select a group of files - selecting/deselecting is done by clicking the mouse on the checkbox in the first column, or by the SPACE key. The pop-up menu of the file list allows you to select all files at once (<em>Select all</em>), deselect all files (<em>Deselect all<em>) or invert the selection (</em>Invert selection</em>).</p>
 <p><img src="winImport2.jpg" />   </p>
-<p>Widoczne w górnym prawym rogu pole <em>Images</em> wyświetla liczbę plików zaznaczonych oraz liczbę wszystkich dostępnych plików w  wybranym folderze. Pole <em>Site</em> umieszczone ponad tabelką z listą plików umożliwia wpisanie domyślnej zawartości pole Site w dodawanych rekordach.</p>
-<p>Po wyborze plików przycisk Import rozpoczyna procedurę importu zdjęć i dodawania rekordów do bazy danych.</p>
+<p>The <em>Images</em> field, visible in the upper right-hand corner, displays the number of selected files and the number of all available files in the selected folder. The <em>Site</em> field placed above the file list allows you to enter the default Site field content in the added records.</p>
+<p>After selecting the files, the <strong>Import</strong> button starts the procedure for importing photos and adding records to the database.</p>
 <p><img src="import_proces.jpg" /></p>
-<p>Podczas importu zdjęć program wyświetla pasek postępu, po zakończeniu importu okno jest zamykane i wyświetlona zostaje główna tabela danych a w niej ostatnio dodanych rekord.</p>
-<p><a name="przeciaganie_zdjec"></a></p>
-<h2>Przeciąganie zdjęć do programu</h2>
-<p>Program obsługuje możliwość przeciągania plików zdjęć np. z eksploratora Windows do tabeli danych w głównym oknie programu. W przypadku pojedynczego zdjęcia, program wyświetli okno identyczne jak przy dodawaniu nowego rekordu, z wczytanym już podglądem zdjęcia - wystarczy uzupełnić dane rekordu i zapisać (plik zdjęcia zostanie skopiowany do folderu danych, zostanie także utworzona miniatura).</p>
+<p>When importing photos, the program displays a progress bar, when the import is finished the window is closed, the main data table is displayed and the last record added.</p>
+<h2>Drag photos to the program</h2>
+<p>The program supports the dragging of the photo files, e.g. from the Windows Explorer to the data table in the main program window. If a single photo is dragged, the program will display the same window as when adding a new record, with already loaded image preview – allowing for filling out the record data and saving (the photo file will be copied to the data folder, a thumbnail will also be created).</p>
 <p><img src="drag_drop1.jpg" /></p>
-<p>W przypadku przeciągnięcia większej liczby zdjęć program wyświetli okno zbliżone do okna importu z folderu, w którym można uzupełnić pole <em>Site</em> i przyciskiem <strong>Import</strong> rozpocząć import zdjęć do bazy danych.</p>
+<p>If you drag a larger number of photos, the program will display a window similar to the import photos from the folder in which the Site field can be filled out and the Import button will start importing photos into the database.</p>
 <p><img src="drag_drop2.jpg" /></p>
-<p><a name="synchronizacja-z-inna-baza-danych"></a></p>
-<h2>Synchronizacja z inną bazą danych</h2>
-<p>Funkcja synchronizacji wywoływana z menu <em>Records-&gt;Synchronization</em> umożliwia pobranie rekordów i zdjęć z bazy innego użytkownika.</p>
+<h2>Synchronization with another database</h2>
+<p>The synchronization function available from the <em>Records-&gt; Synchronization</em> menu allows downloading records and photos from another user's database.</p>
 <p><img src="winSynchronization.jpg" /></p>
-<p>Po uruchomieniu wyświetlane jest okno synchronizacji, w którym należy wskazać ścieżkę do folderu danych z którego będą importowane dane. W folderze tym powinna znajdować się baza danych (plik paleopathology.db), oraz podfoldery 'image' i 's-image'. Po wskazaniu folderu program wyświetli listę rekordów które można zaimportować do naszej bazy danych, wyświetlane są pola ID, CAT. NO i SITE, oraz podgląd bieżącego zdjęcia związanego z rekordem. Podobnie jak w przypadku importu folderu zdjęć w podręcznym menu dostępne są funkcje zaznaczania i odznaczania wszystkich rekordów.    </p>
-<p><a name="wyszukiwanie"></a></p>
-<h2>Wyszukiwanie</h2>
-<p>Aplikacja umożliwia proste wyszukiwanie w tabeli danych. Po wywołaniu funkcji z menu <em>Records-&gt;Find</em> (lub skrótu klawiszowego CRTL+I) wyświetlane jest okno wyszukiwania:</p>
+<p>After selecting the synchronisation option, the synchronization window is displayed, in which the path to the data folder from which the data will be imported should be indicated. The folder should contain a database (paleopathology.db file), and subfolders 'image' and 's-image'. After indicating the folder, the program will display a list of records that can be imported into our database, the ID, CAT NO. and SITE fields are displayed with a preview of the current photo related to the record. As with the import of a photo folder, the functions of selecting and deselecting records are available in the pop-up menu.</p>
+<h2>Search</h2>
+<p>The application allows a simple search in the data table. After calling the function from the <em>Records-&gt; Find</em> menu (or the keyboard shortcut CTRL + I) the search window is displayed:</p>
 <p><img src="winFind.jpg" /></p>
-<p>W oknie znajduje się tylko jedno pole w które należy wprowadzić poszukiwany tekst. Wyszukiwanie następuje we wszystkich polach bazy danych. Jeżeli tekst zostanie znaleziony program ustawia się na znalezionym rekordzie w tabeli danych. Można wyszukać kolejne wystąpienia poprzez menu <em>Records-&gt;Find next</em> (lub skrótem klawiszowym F3).      </p>
-<p><a name="filtrowanie"></a></p>
-<h2>Filtrowanie</h2>
-<p>Oprócz wyszukiwania dostępna jest także możliwość filtrowania danych, wywoływana poprzez menu <em>Records-&gt;Filter</em> (lub skrót klawiszowy CRTL+F). Program wyświetla wówczas okno z możliwością wprowadzenia warunków filtrowania:</p>
+<p>In the window, there is only one field in which the desired text should be entered. The search is carried out in all fields of the database. If the text is found, the program sets to the found record in the data table. You can search for subsequent occurrences via the <em>Records-&gt; Find next</em> menu (or pressing F3 key).</p>
+<h2>Filtering the records</h2>
+<p>In addition to the search, there is also the option for data filtering, called via the menu <em>Records-&gt; Filter</em> (or the keyboard shortcut CTRL + F). The program then displays a window with filtering options:</p>
 <p><img src="winFilter.jpg" /></p>
-<p>W oknie widoczne są wszystkie pola bazy danych (poza ID), możliwe jest wprowadzenie fragmentu tekstu który ma być odnaleziony w danym polu, lub wymuszenie by wprowadzony tekst miał być dokładnie zgodny z zawartością pola (należy wówczas zaznaczyć check-box widoczny z prawej strony pola). Cześć z pól, np. <em>Site</em>, <em>Bone</em> czy <em>Change type</em> posiada (podobnie jak przy edycji rekordu) możliwość wyboru wartości ze słownika (pola rozwijanego), w którym znajdują się wszystkie (niepowtarzające się) wartości występujące w danym polu w całej bazie danych.</p>
-<p>Po wprowadzeniu oczekiwanych wartości można przyciskiem OK uruchomić proces filtrowania, w wyniku którego tabela danych zostanie ograniczona do rekordów spełniających warunki filtra. W pasku tytułu programu zostanie wyświetlona informacja o liczbie znalezionych rekordów.</p>
+<p>In the window, you can see all the fields of the database (except ID). It is possible to enter a fragment of the text to be found in a given field or to force the entered text to be exactly compatible with the field contents (check box must be visible on the right side of the field ). Some of the fields, e.g. <em>Site</em>, <em>Bone</em> or <em>Change type</em> have (just like when editing a record) the ability to choose values from a dictionary (drop-down box), in which all (non-recurring) values appear in a given field in the entire database.</p>
+<p>After entering the expected values, you can start the filtering process with the OK button. The filtered data table will be limited to the records that meet the filter conditions. The program title bar will display information about the number of records found.</p>
 <p><img src="filtr_wynik.jpg" /></p>
-<p>Przywrócenie wyświetlania wszystkich rekordów z bazy danych jest możliwe dzięki funkcji <em>Records-&gt;Show all records</em> (lub skrót CRTL+G).</p>
-<p><a name="zapis-zdjecia"></a></p>
-<h2>Zapis zdjęcia</h2>
-<p>Funkcja <em>Records-&gt;Copy file to</em> (lub CRTL+P)pozwala na zapis zdjęcia przypisanego do bieżącego rekordu w miejsce wskazane przez użytkownika.</p>
-<p><a name="eksport-danych"></a></p>
-<h2>Eksport danych</h2>
-<p>Funkcja <em>Records-&gt;Export...</em> umożliwia zapisanie bazy danych w formie pliku tekstowego csv (separatorem pól jest średnik). Plik taki można łatwo wczytać do arkusza kalkulacyjnego.</p>
-<p><a name="zoom"></a></p>
-<h2>Zoom - podgląd powiększonego zdjęcia</h2>
-<p>Funkcja <em>Records-&gt;Zoom</em> (skrót CRTL+M lub ENTER) wywołuje okno z powiększonym zdjęciem przypisanym do bieżącego rekordu.</p>
+<p>Reverting to original data table, displaying all records from the database require selecting Records-&gt; Show all records option (or the abbreviation CTRL + G).</p>
+<h2>Record photo</h2>
+<p>The <em>Records-&gt; Copy file to</em> (or CTRL + P) function allows you to save an image file assigned to the current record to the place indicated by the user.</p>
+<h2>Data export</h2>
+<p>The <em>Records-&gt; Export...</em> function makes it possible to save the database in the form of a .csv text file (the field separator is a semicolon). Such a file can be easily loaded into a spreadsheet.</p>
+<h2>Preview of the enlarged photo</h2>
+<p>The <em>Records-&gt; Zoom</em> function (CTRL + M or ENTER shortcut) brings up a window with an enlarged photo assigned to the current record.</p>
 <p><img src="winZoom.jpg" /></p>
-<p>Okno Zoom posiada dodatkowe funkcje widoczne w podręcznym menu (prawy przycisk myszy).</p>
-<ul>
-<li><em>Full Size</em> - wyświetla zdjęcie w pełnej rozdzielczości, rozmiary zdjęcia mogą przekraczać rozmar okna Zoom, wówczas możliwa jest nawigacja poprzez paski skrolowania (u dołu i po prawej stronie okna), lub poprzez klawisze 'strzałek' oraz PageUp i PageDown a także za pomocą myszy.</li>
-<li><em>10%</em> do <em>90%</em> - skaluje zdjęcie do wybranej wielkości procentowej</li>
-<li><em>Fit image to screen</em> - przywraca domyślny rozmiar zdjęcia dopasowany do wielkości okna Zoom. </li>
-<li><em>Save As...</em> - umożliwia zapisanie zdjęcia we wskazanym przez użytkownika miejscu.</li>
-<li><em>Copy</em> - kopiuje zdjęcie do schowka.</li>
-<li><em>Rotate right</em> - obraca zdjęcie o 90 stopni w prawo (w oknie Zoom, zmiana nie jest zapisywana w pliku).</li>
-<li><em>Rotate left</em> - obraca zdjęcie o 90 stopni w lewo (j.w.).</li>
-<li><em>Notes</em> - wyświetla okienko z możliwością edycji pola Notes.</li>
-<li><em>Close</em> - zamyka okno Zoom, alternatywnie można użyć przycisku w górnym prawym rogu okna lub klawisza ESC.  </li>
-</ul>
+<p>The Zoom window has additional functions visible in the pop-up menu (the right mouse button).
+- <em>Full Size</em> - displays the picture in full resolution, the size of the photo can exceed the size of the Zoom window, then you can navigate using the scrolling bars (bottom and right of the window), or through the 'arrows' keys and PageUp and PageDown keys as well as with the mouse.
+- <em>10% to 90%</em> - scales the photo to the selected percentage
+- <em>Fit image to screen</em> - restores the default photo size adjusted to the size of the Zoom window.
+- <em>Save As...</em> - allows you to save the image in the place indicated by the user.
+- <em>Copy</em> - copies the photo to the clipboard.
+- <em>Rotate right</em> - rotates the photo 90 degrees clockwise (in the Zoom window, the change is not saved in the file).
+- <em>Rotate left</em> - rotates the photo 90 degrees counter-clockwise ( no permanent as described before).
+- <em>Notes</em> - displays a window with the option of editing the Notes field.
+- <em>Close</em> - closes the Zoom window, alternatively, you can use the button in the upper right corner of the window or the ESC key.</p>
 <p><img src="zoom_notes.jpg" /></p>
-<p><a name="kopia-zapasowa-danych"></a></p>
-<h2>Kopia zapasowa danych</h2>
-<p>Podczas uruchomienia programu tworzona jest automatycznie kopia bazy danych
-w pliku paleopathology.backup. Jeżeli istniała poprzednia kopia - jest ona nadpisywana. W razie uszkodzenia danych podczas bieżącej sesji z programem (np. w przypadku błędnego usunięcia danych przez użytkownika) można po wyjściu z aplikacji nadpisać bazę paleopathology.db plikiem paleopathology.backup i ponownie uruchomić program. <strong>Uwaga</strong>: kopia zapasowa dotyczy danych - nie zdjęć.</p>
+<h2>Data backup</h2>
+<p>When you run the program, a copy of the database is automatically created in the paleopathology.backup file. If there was a previous copy - it is overwritten. In the event of data corruption during the current session with the program (e.g. in case of incorrect deletion of data by the user), after exiting the application, you can overwrite the paleopathology.db database with the paleopathology.backup file and restart the program. <strong>Note</strong>: the backup applies to data - not to photo files.</p>
+<hr>
+<p><a href="paleopathology_pl.md">Polish version</a></p>
 
 </body>
 </html>

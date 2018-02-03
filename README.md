@@ -14,7 +14,8 @@ A simple desktop paleopathological database
 
 ## Documentation
 
-[Help (pl)](https://github.com/pjaskulski/PaleopathologyGallery/blob/master/docs/paleopathology.md)
+[(English)](https://github.com/pjaskulski/PaleopathologyGallery/blob/master/docs/paleopathology.md)
+[(Polish)](https://github.com/pjaskulski/PaleopathologyGallery/blob/master/docs/paleopathology_pl.md)
 
 ## Releases
 
