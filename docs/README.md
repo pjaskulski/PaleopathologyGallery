@@ -1,9 +1,3 @@
-# Program PaleopathologyGallery
-
-A simple desktop paleopathological database
-
-![The main screen of the program.](docs/winMain.jpg)
-
 ## Dependencies
 
 - Windows 7, 8, 10 (probably works under Linux/Wine)
