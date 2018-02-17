@@ -72,8 +72,8 @@ Begin Menu MainMenuBar
          SpecialMenu = 0
          Text = "F&ind"
          Index = -2147483648
-         ShortcutKey = "I"
-         Shortcut = "Cmd+I"
+         ShortcutKey = "F"
+         Shortcut = "Cmd+F"
          MenuModifier = True
          AutoEnable = True
       End
@@ -95,8 +95,8 @@ Begin Menu MainMenuBar
          SpecialMenu = 0
          Text = "&Filter"
          Index = -2147483648
-         ShortcutKey = "F"
-         Shortcut = "Cmd+F"
+         ShortcutKey = "I"
+         Shortcut = "Cmd+I"
          MenuModifier = True
          AutoEnable = True
       End
