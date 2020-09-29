@@ -9,6 +9,7 @@ Inherits ImageWell
 
 	#tag Event
 		Sub MouseUp(X As Integer, Y As Integer)
+		  // code partially from old realbasic forum, don't remember original author, but thanks!  
 		  dim doubleClickTime, currentClickTicks as Integer
 		  
 		  #if TargetMacOS then
